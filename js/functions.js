@@ -133,3 +133,17 @@ function adjustCodePosition() {
 function showLoveU() {
 	$('#loveu').fadeIn(3000);
 }
+
+// 🎵 Enable background music on first user interaction
+document.addEventListener("DOMContentLoaded", function () {
+    var audio = document.getElementById("bgMusic");
+    if (!audio) return; // safety check
+
+    document.body.addEventListener("click", function () {
+        audio.play().then(() => {
+            console.log("Music started");
+        }).catch((error) => {
+            console.log("Autoplay blocked:", error);
+        });
+    }, { once: true });
+});
