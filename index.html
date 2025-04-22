@@ -120,21 +120,5 @@ if (!document.createElement('canvas').getContext) {
 }
 </script>
 
-<!-- Audio Controls -->
-<div id="musicControls">
-	<button onclick="toggleMusic()">Toggle Music</button>
-</div>
-
-<script type="text/javascript">
-function toggleMusic() {
-	var bgMusic = document.getElementById('bgMusic');
-	if (bgMusic.paused) {
-		bgMusic.play();
-	} else {
-		bgMusic.pause();
-	}
-}
-</script>
-
 </body>
 </html>
